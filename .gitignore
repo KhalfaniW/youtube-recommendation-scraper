@@ -1,4 +1,9 @@
+# Protection
+.env
+
 # Logs
+videos
+screenshots
 logs
 *.log
 npm-debug.log*
