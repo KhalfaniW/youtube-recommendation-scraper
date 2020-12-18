@@ -1,0 +1,14 @@
+* What is this
+ This is a micro-library that scrapes the recommended ids off of youtube.
+
+ It is a compoentn of a larger project to redesign the youtube homepage to minimize its distracting power
+
+ Most functionality is is in the ~scrape-recommended-ids.ts~ library
+
+ + uses cypress for integreation tests
+ + uses jest for unit tests
+
+**** notes
+ + Built on top of using boilerplate Licensed under the APLv2. from this link
+   https://github.com/jsynowiec/node-typescript-boilerplate/
+   See the LICENSE file for details.
