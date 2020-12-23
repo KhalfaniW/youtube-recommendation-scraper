@@ -3,7 +3,7 @@
 
  It is a compoentn of a larger project to redesign the youtube homepage to minimize its distracting power
 
- Most functionality is is in the ~scrape-recommended-ids.ts~ library
+ Most functionality is is in the ~scrape-recommendations.ts~ library
 
  + uses cypress for integreation tests
  + uses jest for unit tests

@@ -1,7 +1,7 @@
 {
-  "name": "node-typescript-boilerplate",
+  "name": "youtube-reorganizer-modules",
   "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "description": "tools to make youtube reorganizer",
   "engines": {
     "node": ">= 14.15 <15"
   },
@@ -10,6 +10,7 @@
     "@types/node": "~14.14",
     "@typescript-eslint/eslint-plugin": "~4.7.0",
     "@typescript-eslint/parser": "~4.7.0",
+    "browserify": "^17.0.0",
     "cypress": "^6.1.0",
     "cypress-wait-until": "^1.7.1",
     "eslint": "~7.13.0",
@@ -26,18 +27,19 @@
   },
   "scripts": {
     "start": "node build/src/main.js",
+    "run": "node src/run.js",
     "clean": "rimraf coverage build tmp",
     "build": "tsc -p tsconfig.release.json",
     "integration-test": "npx cypress run --headless",
     "build:watch": "tsc -w -p tsconfig.release.json",
+    "build:prototype": "tsc src/prototype/prototype.ts ; browserify src/prototype/prototype.js -o build/prototype.js",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
     "test:watch": "jest --watch"
   },
-  "author": "Jakub Synowiec <github@jakubsynowiec.info>",
+  "author": "Khalfani",
   "license": "Apache-2.0",
   "dependencies": {
-    "browserify": "^17.0.0",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
     "immer": "^8.0.0",

@@ -7,7 +7,7 @@ import {
 import {
   extractAllRecommendations,
   retrievePageHtml,
-} from '../../src/scrape-recommended-ids';
+} from '../../src/scrape-recommendations';
 
 function resetStorage() {
   window.localStorage.setItem(ALL_VIDEO_ID_LOCAL_STORAGE_NAME, null);

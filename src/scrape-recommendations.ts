@@ -1,13 +1,11 @@
 import * as cheerio from 'cheerio';
 import {uniq} from 'lodash';
+import {VideoInfo} from './types';
 
 type VideoId = string;
 
-export function retrievePageHtml(): string {
-  return window.document.body.innerHTML;
-}
 export function extractAllRecommendations(
-  allVideoElementHtml: string,
+  allVideoElementHtml: string = retrievePageHtml(),
 ): Array<VideoId> {
   //this function takes the html from  document.getElementsByTagName("ytd-rich-grid-renderer")[0].innerHTML from the youtube.com homepage
 
@@ -33,4 +31,7 @@ export function extractAllRecommendations(
 function getShouldNotBeRemoved(linkPart: string): boolean {
   const isPartOfAPlaylist = linkPart.includes('&list');
   return !isPartOfAPlaylist;
+}
+export function retrievePageHtml(): string {
+  return window.document.body.innerHTML;
 }

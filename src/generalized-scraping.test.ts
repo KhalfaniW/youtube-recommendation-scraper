@@ -1,7 +1,7 @@
 import {readFileSync} from 'fs';
 import * as path from 'path';
 
-import * as main from './scrape-recommended-ids';
+import * as main from './scrape-recommendations';
 
 function retrieveFileContents(relativeFilePath: string): string {
   const filePath = path.resolve(__dirname, relativeFilePath);
