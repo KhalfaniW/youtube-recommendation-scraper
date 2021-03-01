@@ -5,8 +5,8 @@
 
  Most functionality is is in the ~scrape-recommendations.ts~ library
 
- + uses cypress for integreation tests
- + uses jest for unit tests
+ + uses cypress for e2e tests
+ + uses jest for unit and integreation tests
 
 **** notes
  + Built on top of using boilerplate Licensed under the APLv2. from this link

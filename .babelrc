@@ -1,0 +1,5 @@
+{
+    "minified": false,
+    "presets": ["@babel/preset-typescript"]
+
+}

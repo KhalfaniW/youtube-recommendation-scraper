@@ -1,0 +1,31 @@
+import {
+  VideoInfo,
+  MaybeVideoInfo,
+  FailedVideoInfo,
+  retrieveAllIdList,
+  saveAllIdList,
+  appendToAllIdList,
+  saveAllVideoInfoList,
+  retrieveAllVideoInfoList,
+  extractAllRecommendations,
+  retrievePageHtml,
+  fetchVideoInfoGroupFromHomePage,
+  fetchAllVideoInfoGroupsFromHomePage,
+  fetchAndSetVideoInfoGroup,
+} from './scrape-recommendations';
+
+export {
+  VideoInfo,
+  MaybeVideoInfo,
+  FailedVideoInfo,
+  retrieveAllIdList,
+  saveAllIdList,
+  appendToAllIdList,
+  saveAllVideoInfoList,
+  retrieveAllVideoInfoList,
+  extractAllRecommendations,
+  retrievePageHtml,
+  fetchVideoInfoGroupFromHomePage,
+  fetchAllVideoInfoGroupsFromHomePage,
+  fetchAndSetVideoInfoGroup,
+};
