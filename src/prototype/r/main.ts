@@ -1,9 +1,11 @@
 import fetchVideoInfo from 'updated-youtube-info';
-import {appendToAllIdList, retrieveAllIdList, saveAllIdList} from './store-ids';
 import {
+  appendToAllIdList,
+  retrieveAllIdList,
   extractAllRecommendations,
   retrievePageHtml,
-} from './scrape-recommendations';
+  saveAllIdList,
+} from '../../index';
 
 export function run() {
   const newVideoIds = extractAllRecommendations(retrievePageHtml());

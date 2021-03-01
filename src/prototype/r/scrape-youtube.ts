@@ -1,6 +1,7 @@
 import cheerio from 'cheerio';
 
-import {Recommendation, createVideoInfo} from './types';
+import {Recommendation} from './types';
+import {createScrapedInfo} from './factories';
 
 /*
   [2020-06-18 Thu]
@@ -29,6 +30,7 @@ export function extractAllRecommendations(
   return videoInfoSet;
 }
 
+type ScrapedInfo = any;
 export function extractVideoInfoFromElement(
   videoElementHtml: any,
 ): ScrapedInfo {

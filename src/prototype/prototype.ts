@@ -2,10 +2,9 @@ import {
   appendToAllIdList,
   retrieveAllIdList,
   saveAllIdList,
-} from '../store-ids';
-import {extractAllRecommendations} from '../scrape-recommendations';
-import {fetchAndSetVideoInfoGroup} from '../fetch-info-from-ids';
-
+  fetchAndSetVideoInfoGroup,
+  extractAllRecommendations,
+} from '../index';
 export async function main() {
   const newVideoIds = extractAllRecommendations();
 

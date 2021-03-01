@@ -1,7 +1,9 @@
 {
-  "name": "youtube-reorganizer-modules",
+  "name": "youtube-recommendation-scraper",
   "version": "0.0.0",
-  "description": "tools to make youtube reorganizer",
+  "description": "scrape YouTube homepage recommendations",
+  "main": "lib/index.js",
+  "homepage": "https://github.com/KhalfaniW/youtube-recommendation-scraper",
   "engines": {
     "node": ">= 14.15 <15"
   },
@@ -37,7 +39,8 @@
     "build:prototype": "tsc src/prototype/prototype.ts ; browserify src/prototype/prototype.js -o build/prototype.js",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepare": "tsc -p tsconfig.release.json"
   },
   "author": "Khalfani",
   "license": "Apache-2.0",
