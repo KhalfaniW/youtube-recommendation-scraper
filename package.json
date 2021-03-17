@@ -1,8 +1,9 @@
 {
   "name": "youtube-recommendation-scraper",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "scrape YouTube homepage recommendations",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "homepage": "https://github.com/KhalfaniW/youtube-recommendation-scraper",
   "engines": {
     "node": ">= 14.15 <15"
@@ -34,7 +35,7 @@
     "start": "node build/src/main.js",
     "run": "node src/run.js",
     "clean": "rimraf coverage build tmp",
-    "build": "rm -r lib; tsc -p tsconfig.release.json",
+    "build": "tsc -p tsconfig.release.json",
     "integration-test": "npx cypress run --headless",
     "build:watch": "tsc -w -p tsconfig.release.json",
     "build:prototype": "tsc src/prototype/prototype.ts ; browserify src/prototype/prototype.js -o build/prototype.js",

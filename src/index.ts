@@ -1,31 +1,22 @@
-import {
-  VideoInfo,
-  MaybeVideoInfo,
-  FailedVideoInfo,
+export {VideoInfo, MaybeVideoInfo, FailedVideoInfo} from './types';
+export {ALL_VIDEO_ID_LOCAL_STORAGE_NAME} from './constants';
+
+export {
   retrieveAllIdList,
   saveAllIdList,
   appendToAllIdList,
   saveAllVideoInfoList,
   retrieveAllVideoInfoList,
+} from './store-ids';
+
+export {
   extractAllRecommendations,
   retrievePageHtml,
-  fetchVideoInfoGroupFromHomePage,
-  fetchAllVideoInfoGroupsFromHomePage,
-  fetchAndSetVideoInfoGroup,
 } from './scrape-recommendations';
 
 export {
-  VideoInfo,
-  MaybeVideoInfo,
-  FailedVideoInfo,
-  retrieveAllIdList,
-  saveAllIdList,
-  appendToAllIdList,
-  saveAllVideoInfoList,
-  retrieveAllVideoInfoList,
-  extractAllRecommendations,
-  retrievePageHtml,
   fetchVideoInfoGroupFromHomePage,
   fetchAllVideoInfoGroupsFromHomePage,
   fetchAndSetVideoInfoGroup,
-};
+  fetchInfoFromIds,
+} from './fetch-info-from-ids';

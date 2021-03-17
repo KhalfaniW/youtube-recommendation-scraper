@@ -8,6 +8,7 @@ export interface VideoInfo {
   description: string;
   durationSeconds: number;
   views: number;
+  datePublished: string;
 }
 export interface FailedVideoInfo {
   id: string;

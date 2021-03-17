@@ -37,7 +37,9 @@ export async function fetchAndSetVideoInfoGroup(
   );
 }
 
-async function fetchInfoFromIds(videoIds: string[]): Promise<MaybeVideoInfo[]> {
+export async function fetchInfoFromIds(
+  videoIds: string[],
+): Promise<MaybeVideoInfo[]> {
   const fetchVideoInfoPromises = videoIds.map(
     async (videoId): Promise<MaybeVideoInfo> => {
       try {
@@ -49,7 +51,7 @@ async function fetchInfoFromIds(videoIds: string[]): Promise<MaybeVideoInfo[]> {
           thumbnailUrl: allInfo.thumbnailUrl,
           title: allInfo.title,
           creator: allInfo.owner,
-          // datePublished: allInfo.datePublished,
+          datePublished: allInfo.datePublished,
           views: allInfo.views,
           description: allInfo.description,
           durationSeconds: allInfo.durationSeconds,
