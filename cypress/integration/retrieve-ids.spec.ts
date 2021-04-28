@@ -5,7 +5,7 @@ import {
   saveAllIdList,
 } from '../../src/store-ids';
 import {
-  extractAllRecommendations,
+  extractAllRecommendationIds,
   retrievePageHtml,
 } from '../../src/scrape-recommendations';
 
@@ -13,7 +13,7 @@ function resetStorage() {
   window.localStorage.setItem(ALL_VIDEO_ID_LOCAL_STORAGE_NAME, null);
 }
 function retrieveAndUpdateAllVideoIds(html: string = retrievePageHtml()) {
-  const newVideoIds = extractAllRecommendations(html);
+  const newVideoIds = extractAllRecommendationIds(html);
   const updatedAllIdSet = appendToAllIdList(retrieveAllIdList(), newVideoIds);
   saveAllIdList(updatedAllIdSet);
 }
@@ -32,13 +32,13 @@ it('get 1 lists of ids', () => {
   const checkIfFirstIsCorrect = (window: any) => {
     const html = window.document.body.innerHTML;
     retrieveAndUpdateAllVideoIds(html);
-    const newVideoIds = extractAllRecommendations(html);
+    const newVideoIds = extractAllRecommendationIds(html);
     expect(newVideoIds.length).to.equal(50);
 
     expect(JSON.stringify(retrieveAllIdList())).to.equal(
       JSON.stringify([newVideoIds]),
     );
-    firstVideoIdCount = extractAllRecommendations.length;
+    firstVideoIdCount = extractAllRecommendationIds.length;
 
     /*
       expect(firstVideoIdCount).to.greaterThan(20);
@@ -55,7 +55,7 @@ it('get 1 lists of ids', () => {
   cy.visit('https://youtube.com', {
     onLoad: (contentWindow) => {
       const html = contentWindow.document.body.innerHTML;
-      const secondVideoIds = extractAllRecommendations(html);
+      const secondVideoIds = extractAllRecommendationIds(html);
       const secondVideoIdCount = secondVideoIdCount;
       retrieveAndUpdateAllVideoIds(html);
       const currentVideoIdCount = retrieveAllIdList().length;

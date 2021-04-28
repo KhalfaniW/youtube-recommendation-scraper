@@ -13,7 +13,7 @@ const mockVideoContentsGroupHtml = retrieveFileContents(
   './mock-video-contents-group.html',
 );
 test('extracts multiple videos', () => {
-  const allVideoInfos = main.extractAllRecommendations(
+  const allVideoInfos = main.extractAllRecommendationIds(
     mockVideoContentsGroupHtml,
   );
   expect(allVideoInfos.length).toBeGreaterThan(40);

@@ -7,7 +7,7 @@ import {
   getOnlySuccessfulVideoInfoGroup,
 } from './types';
 
-import {extractAllRecommendations} from './scrape-recommendations';
+import {extractAllRecommendationIds} from './scrape-recommendations';
 import {getItemCountForListGroup} from './count-items';
 
 export async function fetchVideoInfoGroupFromHomePage(
@@ -20,7 +20,7 @@ export async function fetchVideoInfoGroupFromHomePage(
 export async function fetchAllVideoInfoGroupsFromHomePage(
   youtubeHomePageDocument: Document = document,
 ): Promise<MaybeVideoInfo[]> {
-  const newVideoIds = extractAllRecommendations(
+  const newVideoIds = extractAllRecommendationIds(
     youtubeHomePageDocument.body.innerHTML,
   );
   return await fetchInfoFromIds(newVideoIds);

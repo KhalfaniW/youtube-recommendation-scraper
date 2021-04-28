@@ -10,7 +10,7 @@ export {
 } from './store-ids';
 
 export {
-  extractAllRecommendations,
+  extractAllRecommendationIds,
   retrievePageHtml,
 } from './scrape-recommendations';
 
