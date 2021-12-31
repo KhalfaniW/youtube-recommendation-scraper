@@ -8,7 +8,7 @@
  + uses cypress for e2e tests
  + uses jest for unit and integreation tests
 
-** Here are all the exports
+**** Here are all the exports from index.tsx
 
 #+BEGIN_EXAMPLE
 export {VideoInfo, MaybeVideoInfo, ScrapedVideoInfo, FailedVideoInfo} from './types';
