@@ -8,6 +8,33 @@
  + uses cypress for e2e tests
  + uses jest for unit and integreation tests
 
+** Here are all the exports
+
+#+BEGIN_EXAMPLE
+export {VideoInfo, MaybeVideoInfo, ScrapedVideoInfo, FailedVideoInfo} from './types';
+export {ALL_VIDEO_ID_LOCAL_STORAGE_NAME} from './constants';
+
+export {
+  retrieveAllIdList,
+  saveAllIdList,
+  appendToAllIdList,
+  saveAllVideoInfoList,
+  retrieveAllVideoInfoList,
+} from './store-ids';
+
+export {
+  extractAllRecommendationIds,
+  retrievePageHtml,
+} from './scrape-recommendations';
+
+export {
+  fetchVideoInfoGroupFromHomePage,
+  fetchAllVideoInfoGroupsFromHomePage,
+  fetchAndSetVideoInfoGroup,
+  fetchInfoFromIds,
+} from './fetch-info-from-ids';
+
+#+END_EXAMPLE
 **** notes
  + Built on top of using boilerplate Licensed under the APLv2. from this link
    https://github.com/jsynowiec/node-typescript-boilerplate/
