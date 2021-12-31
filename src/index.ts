@@ -1,4 +1,4 @@
-export {VideoInfo, MaybeVideoInfo, FailedVideoInfo} from './types';
+export {VideoInfo, MaybeVideoInfo, ScrapedVideoInfo, FailedVideoInfo} from './types';
 export {ALL_VIDEO_ID_LOCAL_STORAGE_NAME} from './constants';
 
 export {
