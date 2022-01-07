@@ -1,9 +1,8 @@
 {
   "name": "youtube-recommendation-scraper",
-  "version": "0.0.7",
+  "version": "1.2.0",
   "description": "scrape YouTube homepage recommendations",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "homepage": "https://github.com/KhalfaniW/youtube-recommendation-scraper",
   "engines": {
     "node": ">= 14.15 <15"
@@ -23,22 +22,22 @@
     "eslint-plugin-jest": "~24.1.3",
     "fs": "0.0.1-security",
     "jest": "~26.6.3",
-    "prettier": "~2.1.2",
+    "prettier": "^2.1.2",
     "rimraf": "~3.0.2",
     "ts-jest": "~26.4.4",
     "tsutils": "~3.17.0",
-    "typescript": "~4.0.5",
-    "webpack": "^5.11.0",
-    "webpack-cli": "^4.2.0"
+    "typescript": "~4.0.5"
   },
   "scripts": {
     "start": "node build/src/main.js",
     "run": "node src/run.js",
     "clean": "rimraf coverage build tmp",
-    "build": "tsc -p tsconfig.release.json",
+    "build-2": "tsc -p tsconfig.release.json",
     "integration-test": "npx cypress run --headless",
     "build:watch": "tsc -w -p tsconfig.release.json",
-    "build:prototype": "tsc src/prototype/prototype.ts ; browserify src/prototype/prototype.js -o build/prototype.js",
+    "build": "npm run compile && npm run browserify",
+    "compile": "tsc -p tsconfig.browser.json",
+    "browserify": " browserify --standalone  youtubeRecommendationScraper lib-pre/index.js -o lib/index.js",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -47,10 +46,12 @@
   "author": "Khalfani",
   "license": "Apache-2.0",
   "dependencies": {
+    "-": "0.0.1",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
+    "g": "^2.0.1",
     "immer": "^8.0.0",
-    "node-html-parser": "^3.2.0",
+    "node-html-parser": "^5.2.0",
     "tslib": "~2.0.3",
     "updated-youtube-info": "^1.4.7"
   },
