@@ -11,6 +11,7 @@ export {
 
 export {
   extractAllRecommendationIds,
+  extractAllRecommendationVideoInfos,
   retrievePageHtml,
 } from './scrape-recommendations';
 
